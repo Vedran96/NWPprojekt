@@ -65,7 +65,7 @@ $MySQL = mysqli_connect("localhost","root","","database") or die('Error connecti
 	<div id="register">';
 	
 	
-	if ($_POST['_action_'] == FALSE) {
+	if ($_POST == FALSE) {
 		print '
 		<form action="" id="registration_form" name="registration_form" method="POST">
 			<input type="hidden" id="_action_" name="_action_" value="TRUE">
