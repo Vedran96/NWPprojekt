@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 06, 2021 at 02:45 PM
+-- Generation Time: Jan 06, 2021 at 08:24 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -32,6 +32,7 @@ CREATE TABLE `users` (
   `firstname` varchar(255) NOT NULL,
   `lastname` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `country` char(2) NOT NULL,
   `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
@@ -42,8 +43,8 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`, `country`, `date`, `archive`) VALUES
-(1, 'Vedran', 'Mihalic', 'vedranmihalic96@gmail.com', '*CD0C9370984D6EFEF090301B4DD9B8B8FAD2DB5E', 'HR', '2021-01-06 13:43:57', 'Y');
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `username`, `password`, `country`, `date`, `archive`) VALUES
+(1, 'Vedran', 'Mihalic', 'vedranmihalic96@gmail.com', 'vedran96', '*9B2DC0965BDF5292B611BC2BC9B4F16FFAF780B1', 'HR', '2021-01-06 19:22:28', 'Y');
 
 --
 -- Indexes for dumped tables
