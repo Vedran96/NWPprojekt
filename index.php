@@ -20,40 +20,10 @@
 	# Classes & Functions
     include_once("functions.php");
 	
-
 print '
 <!DOCTYPE html>
-
-<body>
-	<header>
-	<html>
-	<header>
-	<div class="hero-image"></div>
-	<nav>
-		<ul>
-		  <li><a href="index.php">Početna</a></li>
-		  <li><a href="news.html">Vijesti</a></li>
-		  <li><a href="contact.php">Kontakt</a></li>
-		  <li><a href="about-us.php">O nama</a></li>
-		  <li><a href="register.php">Registracija</a></li>
-		  <li><a href="signin.php">Prijava</a></li>
-		 
-		  
-		</ul>
-		</nav>
-	</header>
-	<main>
-		<h1>Dobrodošli na stranicu za praćenje cijena goriva</h1>
-		<figure>
-			<img src="img/fuel.jpg" alt="News" title="News">
-			<figcaption>Ovdje možete pronaći aktualne cijene goriva.</figcaption>
-		</figure>
-		
-		
-		
-	</main>
-</body>
-</html>
+<html>
+	<head>
 		
 		<!-- CSS -->
 		<link rel="stylesheet" href="style.css">
@@ -81,7 +51,7 @@ print '
 		<meta name="twitter:title" content="Hello Example">
 		<meta name="twitter:description" content="Some description">
 		
-		<meta name="author" content="vedranmihalic96@gmail.com">
+        <meta name="author" content="vedranmihalic96@gmail.com">
 		<!-- favicon meta -->
 		<link rel="icon" href="img/icon.ico" type="image/x-icon"/>
 		<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon"/>
@@ -91,32 +61,48 @@ print '
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
 		<!-- End Google Fonts -->
-		<title>Praćenje cijene goriva</title>
-	
-	<h3>Aktualne cijene</h3>
-	<p>Eurosuper 95 9,14kn</p>
-	<p>Eurosuper 100 9,78kn</p>
-	<p>Eurodizel 8,88kn</p>
-	<p>Autoplin 4,68kn</p>
-	<p>Lož ulje 3,96kn</p>
-	<p>Plavi dizel 4,20kn</p>
-	<p>Društvene mreže:<br>
-		<a href="https://www.linkedin.com/in/tim-berners-lee-b41808ab/" target="_blank"><img src="img/linkedin.svg" alt="Linkedin" title="Linkedin" style="width:24px; margin-top:0.4em"></a>
-		<a href="https://twitter.com/timberners_lee" target="_blank"><img src="img/twitter.svg" alt="Twitter" title="Twitter" style="width:24px; margin-top:0.4em"></a>
-		<a href="https://plus.google.com/113372414904624897851" target="_blank"><img src="img/google+.svg" alt="Google+" title="Google+" style="width:24px; margin-top:0.4em"></a>
-	</p>
-</main>
-
-</body>
-</html>
+		<title>Cijene goriva</title>
+	</head>
+<body>
+	<header>
+		<div'; if ($menu > 1) { print ' class="hero-subimage"'; } else { print ' class="hero-image"'; }  print '></div>
+		<nav>';
+			include("menu.php");
+		print '</nav>
+	</header>
 	<main>';
 		if (isset($_SESSION['message'])) {
 			print $_SESSION['message'];
 			unset($_SESSION['message']);
 		}
+	
+	# Homepage
+	if (!isset($menu) || $menu == 1) { include("home.php"); }
+	
+	# News
+	else if ($menu == 2) { include("news.html"); }
+	
+	# Contact
+	else if ($menu == 3) { include("contact.php"); }
+	
+	# About us
+	else if ($menu == 4) { include("about-us.php"); }
+	
+	# Register
+	else if ($menu == 5) { include("register.php"); }
+	
+	# Signin
+	else if ($menu == 6) { include("signin.php"); }
+	#admin
 
+	else if ($menu == 7) { include("admin.php"); }
 	
 	print '
+	<p>Društvene mreže:<br>
+			<a href="https://www.linkedin.com/in/tim-berners-lee-b41808ab/" target="_blank"><img src="img/linkedin.svg" alt="Linkedin" title="Linkedin" style="width:24px; margin-top:0.4em"></a>
+			<a href="https://twitter.com/timberners_lee" target="_blank"><img src="img/twitter.svg" alt="Twitter" title="Twitter" style="width:24px; margin-top:0.4em"></a>
+			<a href="https://plus.google.com/113372414904624897851" target="_blank"><img src="img/google+.svg" alt="Google+" title="Google+" style="width:24px; margin-top:0.4em"></a>
+		</p>
 	</main>
 	<footer>
 		<p>Copyright &copy; 2021 Vedran Mihalić. <a href="https://github.com/Vedran96?tab=repositories"><img src="img/GitHub-Mark-Light-32px.png" title="Github" alt="Github"></a></p>

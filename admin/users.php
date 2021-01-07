@@ -135,9 +135,7 @@
 							$_query .= " WHERE country_code='" . $row['country'] . "'";
 							$_result = @mysqli_query($MySQL, $_query);
 							$_row = @mysqli_fetch_array($_result, MYSQLI_ASSOC);
-							print $_row['country_name'] . '
-						</td>
-						<td>';
+							 
 							if ($row['archive'] == 'Y') { print '<img src="img/inactive.png" alt="" title="" />'; }
                             else if ($row['archive'] == 'N') { print '<img src="img/active.png" alt="" title="" />'; }
 						print '
