@@ -180,9 +180,9 @@
 						<th width="16"></th>
 						<th width="16"></th>
 						<th width="16"></th>
-						<th>Title</th>
-						<th>Description</th>
-						<th>Date</th>
+						<th>Naslov</th>
+						<th>Opis</th>
+						<th>Datum</th>
 						<th width="16"></th>
 					</tr>
 				</thead>

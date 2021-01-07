@@ -4,7 +4,7 @@
 	<h1>Stranica za praćenje cijena goriva</h1>
 	<figure>
 		<img src="img/fuel.jpg" alt="Fuel" title="Fuel">
-		<figcaption>Ovdje možete pronaći trenutne cijene goriva</figcaption>
+		<figcaption>Provjerite kretanje cijena dizela, benzina, autoplina i lož ulja na jednom mjestu!</figcaption>
 	</figure>
 	<h3>Aktualne cijene</h3>
 	<p>Eurosuper 95 9,14kn</p>
