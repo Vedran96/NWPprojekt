@@ -1,4 +1,4 @@
-<<?php 
+<?php 
 	$MySQL = mysqli_connect("localhost","root","","database") or die('Error connecting to MySQL server.');
 	# Update user profile
 	if (isset($_POST['edit']) && $_POST['_action_'] == 'TRUE') {
@@ -39,17 +39,17 @@
 		$result = @mysqli_query($MySQL, $query);
 		$row = @mysqli_fetch_array($result);
 		print '
-		<h2>User profile</h2>
-		<p><b>First name:</b> ' . $row['firstname'] . '</p>
-		<p><b>Last name:</b> ' . $row['lastname'] . '</p>
-		<p><b>Username:</b> ' . $row['username'] . '</p>';
+		<h2>Podaci o profilu</h2>
+		<p><b>Ime:</b> ' . $row['firstname'] . '</p>
+		<p><b>Prezime:</b> ' . $row['lastname'] . '</p>
+		<p><b>Korisničko ime:</b> ' . $row['username'] . '</p>';
 		$_query  = "SELECT * FROM countries";
 		$_query .= " WHERE country_id='" . $row['country'] . "'";
 		$_result = @mysqli_query($MySQL, $_query);
 		$_row = @mysqli_fetch_array($_result);
 		print '
-		<p><b>Country:</b> ' .$_row['country_name'] . '</p>
-		<p><b>Date:</b> ' . pickerDateToMysql($row['date']) . '</p>
+		<p><b>Država:</b> ' .$_row['country_name'] . '</p>
+		<p><b>Datum:</b> ' . pickerDateToMysql($row['date']) . '</p>
 		<p><a href="index.php?menu='.$menu.'&amp;action='.$action.'">Back</a></p>';
 	}
 	#Edit user profile
@@ -66,18 +66,18 @@
 			<input type="hidden" id="_action_" name="_action_" value="TRUE">
 			<input type="hidden" id="edit" name="edit" value="' . $_GET['edit'] . '">
 			
-			<label for="fname">First Name *</label>
+			<label for="fname">Ime *</label>
 			<input type="text" id="fname" name="firstname" value="' . $row['firstname'] . '" placeholder="Your name.." required>
-			<label for="lname">Last Name *</label>
+			<label for="lname">Prezime *</label>
 			<input type="text" id="lname" name="lastname" value="' . $row['lastname'] . '" placeholder="Your last natme.." required>
 				
-			<label for="email">Your E-mail *</label>
+			<label for="email">E-mail adresa *</label>
 			<input type="email" id="email" name="email"  value="' . $row['email'] . '" placeholder="Your e-mail.." required>
 			
-			<label for="username">Username *<small>(Username must have min 5 and max 10 char)</small></label>
+			<label for="username">Korisničko ime *<small>(Username must have min 5 and max 10 char)</small></label>
 			<input type="text" id="username" name="username" value="' . $row['username'] . '" pattern=".{5,10}" placeholder="Username.." required><br>
 			
-			<label for="country">Country</label>
+			<label for="country">Država</label>
 			<select name="country" id="country">
 				<option value="">molimo odaberite</option>';
 				#Select all countries from database database, table countries

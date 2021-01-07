@@ -51,9 +51,7 @@ $MySQL = mysqli_connect("localhost","root","","database") or die('Error connecti
 		$result = @mysqli_query($MySQL, $query);
 		$row = @mysqli_fetch_array($result, MYSQLI_ASSOC);
 		
-		if ($row['email'] == '' || $row['username'] == '') {
-			# password_hash https://secure.php.net/manual/en/function.password-hash.php
-			# password_hash() creates a new password hash using a strong one-way hashing algorithm
+		
 			$pass_hash = password_hash($_POST['password'], PASSWORD_DEFAULT, ['cost' => 12]);
 			
 			$query  = "INSERT INTO users (firstname, lastname, email, username, password, country)";
@@ -62,13 +60,13 @@ $MySQL = mysqli_connect("localhost","root","","database") or die('Error connecti
 			
 			# ucfirst() — Make a string's first character uppercase
 			# strtolower() - Make a string lowercase
-			echo '<p>' . ucfirst(strtolower($_POST['firstname'])) . ' ' .  ucfirst(strtolower($_POST['lastname'])) . ', thank you for registration </p>
+			echo '<p>' . ucfirst(strtolower($_POST['firstname'])) . ' ' .  ucfirst(strtolower($_POST['lastname'])) . ', Zahvaljujemo na registraciji </p>
 			<hr>';
 		}
 		else {
 			echo '<p>User with this email or username already exist!</p>';
 		}
-	}
+	//}
 	print '
 	
 	</div>

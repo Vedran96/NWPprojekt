@@ -30,7 +30,7 @@
 				<option value="HU">Hungary</option>
 			</select>
 			<label for="subject">Poruka</label>
-			<textarea id="subject" name="subject" placeholder="Unesite poruki.." style="height:200px"></textarea>
+			<textarea id="subject" name="subject" placeholder="Unesite poruku.." style="height:200px"></textarea>
 			<input type="submit" value="Submit">
 		</form>
 	</div>

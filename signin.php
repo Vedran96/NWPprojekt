@@ -22,7 +22,7 @@ $MySQL = mysqli_connect("localhost","root","","database") or die('Error connecti
 		
 		$query  = "SELECT * FROM users";
 		$query .= " WHERE username='" .  $_POST['username'] . "'";
-		$query .= " AND archive='N'";
+		$query .= " AND archive='Y'";
 		$result = @mysqli_query($MySQL, $query);
 		$row = @mysqli_fetch_array($result, MYSQLI_ASSOC);
 		
