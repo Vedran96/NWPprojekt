@@ -1,4 +1,5 @@
 <?php 
+$MySQL = mysqli_connect("localhost","root","","database") or die('Error connecting to MySQL server.');
 	if ($_SESSION['user']['valid'] == 'true') {
 		if (!isset($action)) { $action = 1; }
 		print '

@@ -70,23 +70,23 @@ $MySQL = mysqli_connect("localhost","root","","database") or die('Error connecti
 		<form action="" id="registration_form" name="registration_form" method="POST">
 			<input type="hidden" id="_action_" name="_action_" value="TRUE">
 			
-			<label for="fname">First Name *</label>
-			<input type="text" id="fname" name="firstname" placeholder="Your name.." required>
-			<label for="lname">Last Name *</label>
-			<input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+			<label for="fname">Ime *</label>
+			<input type="text" id="fname" name="firstname" placeholder="Vaše ime.." required>
+			<label for="lname">Prezime *</label>
+			<input type="text" id="lname" name="lastname" placeholder="Vaše prezime.." required>
 				
-			<label for="email">Your E-mail *</label>
-			<input type="email" id="email" name="email" placeholder="Your e-mail.." required>
+			<label for="email">e-mail *</label>
+			<input type="email" id="email" name="email" placeholder="Vaša e-mail adresa.." required>
 			
-			<label for="username">Username:* <small>(Username must have min 5 and max 10 char)</small></label>
-			<input type="text" id="username" name="username" pattern=".{5,10}" placeholder="Username.." required><br>
+			<label for="username">Korisničko ime:* <small>(Username must have min 5 and max 10 char)</small></label>
+			<input type="text" id="username" name="username" pattern=".{5,10}" placeholder="Vaše korisničko ime.." required><br>
 			
 									
-			<label for="password">Password:* <small>(Password must have min 4 char)</small></label>
-			<input type="password" id="password" name="password" placeholder="Password.." pattern=".{4,}" required>
-			<label for="country">Country:</label>
+			<label for="password">Lozinka:* <small>(Password must have min 4 char)</small></label>
+			<input type="password" id="password" name="password" placeholder="Vaša lozinka.." pattern=".{4,}" required>
+			<label for="country">Država:</label>
 			<select name="country" id="country">
-				<option value="">select</option>';
+				<option value="">Odaberite državu</option>';
 				#Select all countries from database database, table countries
 				$query  = "SELECT * FROM countries";
 				$result = @mysqli_query($MySQL, $query);

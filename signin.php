@@ -71,10 +71,10 @@ $MySQL = mysqli_connect("localhost","root","","database") or die('Error connecti
 		print '
 		<form action="" name="myForm" id="myForm" method="POST">
 			<input type="hidden" id="_action_" name="_action_" value="TRUE">
-			<label for="username">Username:*</label>
+			<label for="username">Korisničko ime:*</label>
 			<input type="text" id="username" name="username" value="" pattern=".{5,10}" required>
 									
-			<label for="password">Password:*</label>
+			<label for="password">Lozinka:*</label>
 			<input type="password" id="password" name="password" value="" pattern=".{4,}" required>
 									
 			<input type="submit" value="Submit">

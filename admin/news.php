@@ -1,5 +1,5 @@
 <?php 
-	
+	$MySQL = mysqli_connect("localhost","root","","database") or die('Error connecting to MySQL server.');
 	#Add news
 	if (isset($_POST['_action_']) && $_POST['_action_'] == 'add_news') {
 		$_SESSION['message'] = '';
