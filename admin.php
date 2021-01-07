@@ -6,8 +6,8 @@ $MySQL = mysqli_connect("localhost","root","","database") or die('Error connecti
 		<h1>Administracija</h1>
 		<div id="admin">
 			<ul>
-				<li><a href="index.php?menu=7&amp;action=1">Users</a></li>
-				<li><a href="index.php?menu=7&amp;action=2">News</a></li>
+				<li><a href="index.php?menu=7&amp;action=1">Korisnici</a></li>
+				<li><a href="index.php?menu=7&amp;action=2">Vijesti</a></li>
 				
 			</ul>';
 			# Admin Users

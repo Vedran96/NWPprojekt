@@ -61,7 +61,7 @@
 		$checked_archive = false;
 		
 		print '
-		<h2>Edit user profile</h2>
+		<h2>Promjeni korisnički profil</h2>
 		<form action="" id="registration_form" name="registration_form" method="POST">
 			<input type="hidden" id="_action_" name="_action_" value="TRUE">
 			<input type="hidden" id="edit" name="edit" value="' . $_GET['edit'] . '">
@@ -103,7 +103,7 @@
 	}
 	else {
 		print '
-		<h2>List of users</h2>
+		<h2>Popis korisnika</h2>
 		<div id="users">
 			<table>
 				<thead>
@@ -111,10 +111,9 @@
 						<th width="16"></th>
 						<th width="16"></th>
 						<th width="16"></th>
-						<th>First name</th>
-						<th>Last name</th>
+						<th>Ime</th>
+						<th>Prezime</th>
 						<th>E mail</th>
-						<th>Država</th>
 						<th width="16"></th>
 					</tr>
 				</thead>
@@ -136,8 +135,8 @@
 							$_result = @mysqli_query($MySQL, $_query);
 							$_row = @mysqli_fetch_array($_result, MYSQLI_ASSOC);
 							 
-							if ($row['archive'] == 'Y') { print '<img src="img/inactive.png" alt="" title="" />'; }
-                            else if ($row['archive'] == 'N') { print '<img src="img/active.png" alt="" title="" />'; }
+							if ($row['archive'] == 'N') { print '<img src="img/inactive.png" alt="" title="" />'; }
+                            else if ($row['archive'] == 'Y') { print '<img src="img/active.png" alt="" title="" />'; }
 						print '
 						</td>
 					</tr>';

@@ -172,7 +172,7 @@
 	}
 	else {
 		print '
-		<h2>News</h2>
+		<h2>Vjesti</h2>
 		<div id="news">
 			<table>
 				<thead>

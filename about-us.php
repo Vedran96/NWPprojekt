@@ -11,7 +11,7 @@
 		  Your browser does not support HTML5 video.
 		</video>
 	 
-	<p>Mi smo stranica koja se bavi prikupljanjem cijene goriva na Hrvatskom tržištu</p>
+	<p>Mi smo stranica koja se bavi prikupljanjem, praćenjem cijena goriva na Hrvatskom tržištu,svaki utorak obnavljamo cijene goriva te pratimo tržište u Svijetu</p>
 	<p>Osnovani smo 2.1.2021. U Zagrebu</p>
 	
 	
